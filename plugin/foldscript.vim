@@ -39,10 +39,10 @@ command! -nargs=1 -complete=file TScript
 " Maps {{{1
 "===========
 
-nn <Plug>(foldscript)next    <C-w>pzjzx<C-w>p
-nn <Plug>(foldscript)prev    <C-w>pzkzx<C-w>p
-nn <Plug>(foldscript)start   <C-w>pggzx<C-w>p
-nn <Plug>(foldscript)end     <C-w>pGzx<C-w>p
+nn <Plug>(foldscript)next    <C-w>bzjzx<C-w>p
+nn <Plug>(foldscript)prev    <C-w>bzkzx<C-w>p
+nn <Plug>(foldscript)start   <C-w>bggzx<C-w>p
+nn <Plug>(foldscript)end     <C-w>bGzx<C-w>p
 
 if !hasmapto('<Plug>(foldscript)next', 'n')
   nmap <unique> <Leader><Down>  <Plug>(foldscript)next
