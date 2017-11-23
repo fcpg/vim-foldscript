@@ -3,6 +3,8 @@ Foldscript
 
 Simple way to show some text ('transcript') in terminal recordings (eg. asciinema).
 
+Check [vim-complimentary](https://github.com/fcpg/vim-complimentary) for an example.
+
 Settings
 ---------
 
