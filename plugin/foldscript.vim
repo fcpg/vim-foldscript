@@ -10,34 +10,19 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
-"================
-" Functions {{{1
-"================
-
-function! s:SetSTL()
-  if get(g:, 'foldscript_nostl', 0)
-    return
-  endif
-  let &l:stl = ">>> Transcript <<<"
-  if stridx(&fcs, 'stl:') == -1
-    set fcs+=stl:-
-  endif
-endfun
-
-
-"===============
+"---------------
 " Commands {{{1
-"===============
+"---------------
 
 command! -nargs=1 -complete=file TScript
-      \  call <Sid>SetSTL()
+      \  call foldscript#SetSTL()
       \| bot 5sp <args>
       \| winc p
 
 
-"===========
+"-----------
 " Maps {{{1
-"===========
+"-----------
 
 nn <Plug>(foldscript)next    <C-w>bzjzx<C-w>p
 nn <Plug>(foldscript)prev    <C-w>bzkzx<C-w>p
