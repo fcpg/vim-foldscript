@@ -14,3 +14,6 @@ setl fdo=all
 setl fcl=all
 setl so=999
 
+if exists('*timer_start')
+  autocmd BufLeave <buffer>  call foldscript#FlashText()
+endif
