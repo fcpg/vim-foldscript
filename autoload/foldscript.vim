@@ -21,7 +21,7 @@ function! foldscript#SetSTL() abort
   endif
 endfun
 
-if exists('*timer_start')
+if exists('*timer_start') && !get(g:, 'foldscript_noflash', 0)
   function! foldscript#FlashText() abort
     let s = get(g:, 'foldscript_flash', 100)
     let data = {'i': 1, 's': s}

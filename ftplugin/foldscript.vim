@@ -14,6 +14,6 @@ setl fdo=all
 setl fcl=all
 setl so=999
 
-if exists('*timer_start')
+if exists('*timer_start') && !get(g:, 'foldscript_noflash', 0)
   autocmd BufLeave <buffer>  call foldscript#FlashText()
 endif
